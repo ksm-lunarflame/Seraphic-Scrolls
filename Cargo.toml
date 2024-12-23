@@ -1,0 +1,10 @@
+[package]
+name = "seraphic_scrolls"
+version = "0.0.1"
+authors = ["ksm-lunarflame"]
+edition = "2021"
+description = "A simple window creation and management library in Rust."
+repository = "https://github.com/ksm-lunarflame/Seraphic-Scrolls"
+license = "MIT"
+
+[dependencies]
