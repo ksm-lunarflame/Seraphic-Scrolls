@@ -1,1 +1,23 @@
-/target
+# Cargo artifacts
+target/
+
+# Rust compiler artifacts
+**/*.rs.bk
+**/*.rs.orig
+**/*.rs.swp
+**/*.rs.swo
+**/*.rs.swn
+
+# IDE and editor artifacts
+.idea/
+.vscode/
+.DS_Store
+.vs/
+.project
+.settings/
+.cproject
+.cargo/
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
