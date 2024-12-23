@@ -111,7 +111,7 @@ extern "system" {
 
     fn ShowWindow(hWnd: HWND, nCmdShow: c_int) -> i32;
 
-    fn Translate.message(lpMsg: *const MSG) -> i32;
+    fn TranslateMessage(lpMsg: *const MSG) -> i32;
 
     fn BeginPaint(hWnd: HWND, lpPaint: *mut PAINTSTRUCT) -> *mut c_void;
 
@@ -146,7 +146,7 @@ pub unsafe extern "system" fn window_proc(
     wparam: WPARAM,
     lparam: LPARAM,
 ) -> LRESULT {
-    match Msg {
+    match msg {
         WM_DESTROY => {
             PostQuitMessage(0);
             0
@@ -160,7 +160,7 @@ pub unsafe extern "system" fn window_proc(
             EndPaint(hwnd, &ps);
             0
         }
-        _ => DefWindowProcW(hwnd, Msg, wparam, lparam),
+        _ => DefWindowProcW(hwnd, msg, wparam, lparam),
     }
 }
 
